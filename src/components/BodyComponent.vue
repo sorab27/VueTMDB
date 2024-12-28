@@ -13,10 +13,12 @@
                     </span>
                     <p style="width: min-content;">User Score</p>
                 </span>
-                <span class="more">☰</span>
-                <span class="heart">Heart</span>
-                <span class="bookmark">Bookmark</span>
-                <span class="like">Like</span>
+                <span class="mid-details">
+                    <span class="more">☰</span>
+                    <span class="heart">Heart</span>
+                    <span class="bookmark">Bookmark</span>
+                    <span class="like">Like</span>
+                </span>
                 <span class="play-trailer">Play Trailer</span>
             </div>
             <!-- <button class="trailer-btn">Play Trailer</button> -->
@@ -186,6 +188,11 @@ export default {
     gap: 10px;
 }
 
+.mid-details {
+    display: flex;
+    gap: 40px;
+}
+
 ul {
     list-style-type: none;
     line-height: 3rem;
@@ -195,10 +202,27 @@ ul {
 @media (max-width: 768px) {
     .movie-layout {
         flex-direction: column;
+        padding-bottom: 40px;
     }
-    .more, .heart, .bookmark, .like {
+
+    .poster {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* .more, .heart, .bookmark, .like {
         display: none;
-    }
+    } */
+     .mid-details {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px 30px;
+        gap: 30px;
+        background-color: #032541;
+        z-index: 2;
+     }
     .score {
         justify-content: space-between;
     }
